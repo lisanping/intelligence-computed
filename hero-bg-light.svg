@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  计算即智能 · 首页 hero 背景（亮色）
+  设计语义：
+    · 六幕辐条（与 logo 同源，放大于右侧焦点）         → 课程的六幕骨架
+    · 三道汇聚曲线（砖红 / 钢蓝 / 琥珀）              → 压缩 · 预测 · 优化 三柱汇入智能核
+    · 24 px 工程草稿纸点阵 + 等距扫描线                → 与 v1 设计系统一致的"织物"质感
+    · 中心智能核 + sky-blue halo                      → 计算 → 智能 的视觉收束
+  alpha 一律 ≤ 0.40，遵循 design system §4 "背景是织物，不是壁纸"。
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 900"
+     preserveAspectRatio="xMaxYMid slice"
+     aria-hidden="true" role="presentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#FAFAFA"/>
+      <stop offset="55%"  stop-color="#F2F0EA"/>
+      <stop offset="100%" stop-color="#E8E4D8"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="55%"  stop-color="#7DD3FC" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="0%" cy="0%" r="60%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#1C1F24" fill-opacity="0.07"/>
+    </pattern>
+    <pattern id="scan" x="0" y="0" width="24" height="120" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0.5" x2="24" y2="0.5"
+            stroke="#1C1F24" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- 1) 底色 + 织物 -->
+  <rect width="1920" height="900" fill="url(#bg)"/>
+  <rect width="1920" height="900" fill="url(#dots)"/>
+  <rect width="1920" height="900" fill="url(#scan)"/>
+  <rect width="1920" height="900" fill="url(#vignette)"/>
+
+  <!-- 2) 三道汇聚曲线：压缩 · 预测 · 优化 → 智能核 (1480, 440) -->
+  <g fill="none" stroke-linecap="round" stroke-width="1.6">
+    <!-- 压缩 · 砖红 · 上路 -->
+    <path d="M -60 220 C 420 250, 920 320, 1480 440"
+          stroke="#B23A48" stroke-opacity="0.16"/>
+    <!-- 预测 · 钢蓝 · 中路 -->
+    <path d="M -60 380 C 420 390, 920 415, 1480 440"
+          stroke="#2C5F7C" stroke-opacity="0.16"/>
+    <!-- 优化 · 琥珀 · 下路 -->
+    <path d="M -60 560 C 420 530, 920 480, 1480 440"
+          stroke="#C9A227" stroke-opacity="0.16"/>
+  </g>
+
+  <!-- 3) 六幕辐条 mark：右侧焦点（约 1920 × 0.77, 900 × 0.49）-->
+  <g transform="translate(1480 440)">
+    <!-- halo -->
+    <circle r="430" fill="url(#halo)"/>
+
+    <!-- 三柱同心环（外 → 内：压缩 · 预测 · 优化），逐层加强 -->
+    <circle r="380" fill="none" stroke="#1C1F24" stroke-opacity="0.07"  stroke-width="1"/>
+    <circle r="280" fill="none" stroke="#1C1F24" stroke-opacity="0.10"  stroke-width="1"/>
+    <circle r="180" fill="none" stroke="#1C1F24" stroke-opacity="0.13"  stroke-width="1.3"/>
+
+    <!-- 六幕辐条（与 logo 同 60° 间隔） -->
+    <g stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.40" fill="none">
+      <line x1="0" y1="0" x2="0"    y2="-280" stroke="#B23A48"/>
+      <line x1="0" y1="0" x2="242"  y2="-140" stroke="#2C5F7C"/>
+      <line x1="0" y1="0" x2="242"  y2="140"  stroke="#C9A227"/>
+      <line x1="0" y1="0" x2="0"    y2="280"  stroke="#355C3A"/>
+      <line x1="0" y1="0" x2="-242" y2="140"  stroke="#6B4E8E"/>
+      <line x1="0" y1="0" x2="-242" y2="-140" stroke="#B7BCC7"/>
+    </g>
+
+    <!-- 六幕节点 -->
+    <g fill-opacity="0.55">
+      <circle cx="0"    cy="-280" r="6" fill="#B23A48"/>
+      <circle cx="242"  cy="-140" r="6" fill="#2C5F7C"/>
+      <circle cx="242"  cy="140"  r="6" fill="#C9A227"/>
+      <circle cx="0"    cy="280"  r="6" fill="#355C3A"/>
+      <circle cx="-242" cy="140"  r="6" fill="#6B4E8E"/>
+      <circle cx="-242" cy="-140" r="6" fill="#B7BCC7"/>
+    </g>
+
+    <!-- 中心智能核 -->
+    <circle r="14" fill="#0EA5E9" fill-opacity="0.65"/>
+    <circle r="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="0.6"/>
+  </g>
+</svg>

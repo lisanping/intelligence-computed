@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  计算即智能 · 首页 hero 背景（暗色）
+  与 hero-bg-light.svg 同构，色相按 design system §2 暗色调（每幕 accent 提亮一档），
+  织物 alpha 略下调，halo 稍亮以维持视觉锚点。
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 900"
+     preserveAspectRatio="xMaxYMid slice"
+     aria-hidden="true" role="presentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#1B1B1F"/>
+      <stop offset="55%"  stop-color="#13141A"/>
+      <stop offset="100%" stop-color="#0A0B10"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#38BDF8" stop-opacity="0.32"/>
+      <stop offset="55%"  stop-color="#7DD3FC" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="0%" cy="0%" r="60%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#F5F5F7" fill-opacity="0.06"/>
+    </pattern>
+    <pattern id="scan" x="0" y="0" width="24" height="120" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0.5" x2="24" y2="0.5"
+            stroke="#F5F5F7" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- 1) 底色 + 织物 -->
+  <rect width="1920" height="900" fill="url(#bg)"/>
+  <rect width="1920" height="900" fill="url(#dots)"/>
+  <rect width="1920" height="900" fill="url(#scan)"/>
+  <rect width="1920" height="900" fill="url(#vignette)"/>
+
+  <!-- 2) 三道汇聚曲线：压缩 · 预测 · 优化（暗色提亮版）→ 智能核 (1480, 440) -->
+  <g fill="none" stroke-linecap="round" stroke-width="1.6">
+    <!-- 压缩 · 暖红 · 上路 -->
+    <path d="M -60 220 C 420 250, 920 320, 1480 440"
+          stroke="#E5707D" stroke-opacity="0.22"/>
+    <!-- 预测 · 浅蓝 · 中路 -->
+    <path d="M -60 380 C 420 390, 920 415, 1480 440"
+          stroke="#7AB3D1" stroke-opacity="0.22"/>
+    <!-- 优化 · 亮琥珀 · 下路 -->
+    <path d="M -60 560 C 420 530, 920 480, 1480 440"
+          stroke="#E5C24A" stroke-opacity="0.22"/>
+  </g>
+
+  <!-- 3) 六幕辐条 mark -->
+  <g transform="translate(1480 440)">
+    <circle r="430" fill="url(#halo)"/>
+
+    <!-- 三柱同心环 -->
+    <circle r="380" fill="none" stroke="#F5F5F7" stroke-opacity="0.06" stroke-width="1"/>
+    <circle r="280" fill="none" stroke="#F5F5F7" stroke-opacity="0.09" stroke-width="1"/>
+    <circle r="180" fill="none" stroke="#F5F5F7" stroke-opacity="0.13" stroke-width="1.3"/>
+
+    <!-- 六幕辐条（暗色提亮变体） -->
+    <g stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.55" fill="none">
+      <line x1="0" y1="0" x2="0"    y2="-280" stroke="#E5707D"/>
+      <line x1="0" y1="0" x2="242"  y2="-140" stroke="#7AB3D1"/>
+      <line x1="0" y1="0" x2="242"  y2="140"  stroke="#E5C24A"/>
+      <line x1="0" y1="0" x2="0"    y2="280"  stroke="#80B189"/>
+      <line x1="0" y1="0" x2="-242" y2="140"  stroke="#B098D6"/>
+      <line x1="0" y1="0" x2="-242" y2="-140" stroke="#B7BCC7"/>
+    </g>
+
+    <!-- 六幕节点 -->
+    <g fill-opacity="0.70">
+      <circle cx="0"    cy="-280" r="6" fill="#E5707D"/>
+      <circle cx="242"  cy="-140" r="6" fill="#7AB3D1"/>
+      <circle cx="242"  cy="140"  r="6" fill="#E5C24A"/>
+      <circle cx="0"    cy="280"  r="6" fill="#80B189"/>
+      <circle cx="-242" cy="140"  r="6" fill="#B098D6"/>
+      <circle cx="-242" cy="-140" r="6" fill="#B7BCC7"/>
+    </g>
+
+    <!-- 中心智能核（暗色更亮） -->
+    <circle r="14" fill="#38BDF8" fill-opacity="0.78"/>
+    <circle r="14" fill="none" stroke="#E0F2FE" stroke-opacity="0.6" stroke-width="0.6"/>
+  </g>
+</svg>

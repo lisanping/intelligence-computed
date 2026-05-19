@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  计算即智能 · 站点图标
+  概念：六幕辐条 → 智能核（chip 形态）
+  - 外裹深墨圆角矩形 = 计算芯片
+  - 6 个外圈节点 = 六幕，色彩同 design/style/COURSEWARE_DESIGN_SYSTEM.md §3
+  - 中心青色发光球 = 智能 / inference core
+  设计 token 同 .vitepress/theme/style.css
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="计算即智能">
+  <defs>
+    <radialGradient id="ic-bg" cx="50%" cy="38%" r="85%">
+      <stop offset="0%" stop-color="#1B2230"/>
+      <stop offset="100%" stop-color="#0E1116"/>
+    </radialGradient>
+    <radialGradient id="ic-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7DD3FC" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#38BDF8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ic-core" cx="35%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#BAE6FD"/>
+      <stop offset="75%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </radialGradient>
+    <filter id="ic-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- 芯片底座 -->
+  <rect width="64" height="64" rx="14" fill="url(#ic-bg)"/>
+
+  <!-- 六边形装饰轮廓（chip die） -->
+  <polygon points="32,8 53.32,20 53.32,44 32,56 10.68,44 10.68,20"
+           fill="none" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="0.8"/>
+
+  <!-- 智能核背后的青色光晕 -->
+  <circle cx="32" cy="32" r="20" fill="url(#ic-halo)"/>
+
+  <!-- 六幕辐条（act-1..act-5 + neutral） -->
+  <g stroke-width="1.5" stroke-linecap="round" filter="url(#ic-soft)">
+    <line x1="32" y1="32" x2="32"    y2="12" stroke="#B23A48"/>
+    <line x1="32" y1="32" x2="49.32" y2="22" stroke="#2C5F7C"/>
+    <line x1="32" y1="32" x2="49.32" y2="42" stroke="#C9A227"/>
+    <line x1="32" y1="32" x2="32"    y2="52" stroke="#355C3A"/>
+    <line x1="32" y1="32" x2="14.68" y2="42" stroke="#6B4E8E"/>
+    <line x1="32" y1="32" x2="14.68" y2="22" stroke="#B7BCC7"/>
+  </g>
+
+  <!-- 六幕外圈节点 -->
+  <g>
+    <circle cx="32"    cy="12" r="3.2" fill="#B23A48"/>
+    <circle cx="49.32" cy="22" r="3.2" fill="#2C5F7C"/>
+    <circle cx="49.32" cy="42" r="3.2" fill="#C9A227"/>
+    <circle cx="32"    cy="52" r="3.2" fill="#355C3A"/>
+    <circle cx="14.68" cy="42" r="3.2" fill="#6B4E8E"/>
+    <circle cx="14.68" cy="22" r="3.2" fill="#B7BCC7"/>
+  </g>
+
+  <!-- 中心智能核 -->
+  <circle cx="32" cy="32" r="7" fill="url(#ic-core)"/>
+  <circle cx="32" cy="32" r="7" fill="none"
+          stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.6"/>
+</svg>

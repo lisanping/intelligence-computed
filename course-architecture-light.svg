@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 90 1620 870"
+     font-family='"MiSans VF","MiSans",-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif'>
+  <defs>
+    <style>
+      svg     { color: #1f2937; }
+      .c-a    { color: #2563eb; }
+      .c-b    { color: #0e7490; }
+      .c-c    { color: #7e22ce; }
+      .c-d    { color: #c2410c; }
+      .c-e    { color: #15803d; }
+      .c-f    { color: #be123c; }
+      .c-amber{ color: #b45309; }
+      .c-pink { color: #be185d; }
+      /* Light: original opacity tuned for dark bg fades to invisible on white;
+         bump the common dimming presets via attribute selectors (CSS wins over
+         presentational attrs). */
+      [opacity="0.55"]        { opacity: 0.80; }
+      [opacity="0.85"]        { opacity: 0.95; }
+      [stroke-opacity="0.25"] { stroke-opacity: 0.55; }
+      [fill-opacity="0.05"]   { fill-opacity: 0.08; }
+      [fill-opacity="0.12"]   { fill-opacity: 0.18; }
+    </style>
+    <!-- Theme-adaptive colors. Default = light mode (dark text on light bg).
+         prefers-color-scheme: dark switches to lighter shades that read on dark bg.
+         All adaptive elements use class="c-X" + fill/stroke="currentColor". -->
+
+    <!-- Act fills: medium-saturation, solid (white text reads on either page bg) -->
+    <linearGradient id="actA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+    <linearGradient id="actB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#0e7490"/></linearGradient>
+    <linearGradient id="actC" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9333ea"/><stop offset="100%" stop-color="#7e22ce"/></linearGradient>
+    <linearGradient id="actD" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ea580c"/><stop offset="100%" stop-color="#c2410c"/></linearGradient>
+    <linearGradient id="actE" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a"/><stop offset="100%" stop-color="#15803d"/></linearGradient>
+    <linearGradient id="actF" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e11d48"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor" opacity="0.55"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Three Propositions ===== -->
+  <g font-size="15">
+    <rect x="30"   y="100" width="500" height="68" rx="10" class="c-a" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.5"/>
+    <text x="50"  y="124" font-size="16" font-weight="700" class="c-a" fill="currentColor">命题 A · 智能是一种可被计算的模式</text>
+    <text x="50"  y="150" fill="currentColor" opacity="0.85">压缩 = 预测 = 优化；归纳偏置 vs 规模，以 Scaling Law 为最强实证。</text>
+
+    <rect x="570"  y="100" width="500" height="68" rx="10" class="c-c" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.5"/>
+    <text x="590" y="124" font-size="16" font-weight="700" class="c-c" fill="currentColor">命题 B · 能力是「构造」出来的</text>
+    <text x="590" y="150" fill="currentColor" opacity="0.85">内部构造（改参数）+ 外部构造（搭系统）= AI 产品的真正护城河</text>
+
+    <rect x="1110" y="100" width="500" height="68" rx="10" class="c-f" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.5"/>
+    <text x="1130" y="124" font-size="16" font-weight="700" class="c-f" fill="currentColor">命题 C · 当前范式有清晰边界</text>
+    <text x="1130" y="150" fill="currentColor" opacity="0.85">物理世界 / 幻觉 / 越狱 / 可解释 — 4 视角 + 5 个可证伪预测</text>
+  </g>
+
+  <!-- ===== Stage labels ===== -->
+  <g fill="currentColor" font-size="15" font-weight="700" opacity="0.55">
+    <text x="40"  y="195">原 理 · PRINCIPLES　智能为何可被计算</text>
+    <text x="40"  y="480">构 造 · CONSTRUCTION　让原始能力变可用智能</text>
+    <text x="1320" y="480">边 界 · FRONTIERS</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- ROW 1 · Principles: Act I | Act II | Act III  (3 cols, 30px gap)     -->
+  <!-- =================================================================== -->
+
+  <!-- Act I (L01-L05) -->
+  <g class="c-a">
+    <rect x="30" y="205" width="510" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="285" y="237" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第一幕 · 智能何以可计算</text>
+    <text x="285" y="258" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L01 → L05 · 从认知到经典方法</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="55" y="295">L01　你以为你在思考</text>
+      <text x="55" y="320">L02　经典 AI 黄金年代</text>
+      <text x="55" y="345">L03　学习即优化</text>
+      <text x="55" y="370">L04　经典机器学习</text>
+      <text x="55" y="395">L05　结构化数据 / 时序 / 推荐</text>
+    </g>
+    <text x="285" y="430" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.7" font-style="italic">"压缩 + 预测 + 优化" 同一件事的三种说法</text>
+  </g>
+
+  <!-- Act II (L06-L11) -->
+  <g class="c-b">
+    <rect x="570" y="205" width="510" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="825" y="237" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第二幕 · 感知与语言的构造</text>
+    <text x="825" y="258" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L06 → L11 · 手工智慧 → 深度学习</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="595" y="295">L06　像素到特征</text>
+      <text x="595" y="320">L07　卷积：先验编入结构</text>
+      <text x="595" y="345">L08　视觉应用全景</text>
+      <text x="835" y="295">L09　语言智能的前世</text>
+      <text x="835" y="320">L10　RNN → Attention</text>
+      <text x="835" y="345">L11　向量空间：通用语言</text>
+    </g>
+    <text x="825" y="430" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.7" font-style="italic">归纳偏置的最后辉煌</text>
+  </g>
+
+  <!-- Act III (L12-L16) -->
+  <g class="c-b">
+    <rect x="1110" y="205" width="500" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="1360" y="237" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第三幕 · Transformer 与大模型</text>
+    <text x="1360" y="258" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L12 → L16 · 规模路线的胜利</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="1135" y="295">L12　Attention Is All You Need</text>
+      <text x="1135" y="320">L13　BERT vs GPT 两条岔路</text>
+      <text x="1135" y="345">L14　Scaling Law</text>
+      <text x="1135" y="370">L15　预训练全景：工程现实</text>
+      <text x="1135" y="395">L16　开源革命与量化</text>
+    </g>
+    <text x="1360" y="430" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.7" font-style="italic">放弃先验，换规模红利 — 命题 A 的最强验证</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- ROW 2 · Construction + Frontiers                                     -->
+  <!-- Act IV (narrow) | Act V (wide, 11 lectures, 2 sub-columns) | Act VI  -->
+  <!-- =================================================================== -->
+
+  <!-- Act IV · Internal (L17-L20) — narrow -->
+  <g class="c-c">
+    <rect x="30" y="490" width="320" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="190" y="522" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第四幕 · 内部构造</text>
+    <text x="190" y="543" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L17 → L20 · 改参数</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="55" y="580">L17　强化学习与博弈</text>
+      <text x="55" y="605">L18　对齐：让模型有用</text>
+      <text x="55" y="630">L19　微调与专化</text>
+      <text x="55" y="655">L20　推理模型：三思而后行</text>
+    </g>
+    <text x="190" y="700" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.7" font-style="italic">原始能力 → 对齐 → 慢思考</text>
+  </g>
+
+  <!-- Act V · External (L21-L31) — widest, two sub-columns -->
+  <g class="c-d">
+    <rect x="380" y="490" width="900" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="830" y="522" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第五幕 · 外部构造 — 不改模型，搭系统</text>
+    <text x="830" y="543" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L21 → L31 · 11 讲 · AI 产品的真正护城河</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="405" y="580">L21　Prompt 工程</text>
+      <text x="405" y="605">L22　上下文工程</text>
+      <text x="405" y="630">L23　Embedding 与向量检索</text>
+      <text x="405" y="655">L24　RAG：拥有你的知识</text>
+      <text x="405" y="680">L25　Function Calling / MCP</text>
+      <text x="405" y="705">L26　AI Agent</text>
+
+      <text x="850" y="580">L27　Agent 能力装配</text>
+      <text x="850" y="605">L28　Agent 协议层</text>
+      <text x="850" y="630">L29　多模态应用</text>
+      <text x="850" y="655">L30　AI 编程协作</text>
+      <text x="850" y="680">L31　评估 / 监控 / LLMOps</text>
+    </g>
+    <line x1="830" y1="570" x2="830" y2="715" stroke="currentColor" stroke-dasharray="4,4" opacity="0.45"/>
+  </g>
+
+  <!-- Act VI · Frontiers (L32-L35) — narrow -->
+  <g class="c-f">
+    <rect x="1310" y="490" width="300" height="245" rx="12" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="1460" y="522" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor">第六幕 · 已知的未知</text>
+    <text x="1460" y="543" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.75">L32 → L35</text>
+    <g font-size="15" fill="#1f2937">
+      <text x="1335" y="580">L32　生成式 AI 版图</text>
+      <text x="1335" y="605">L33　具身智能：物理重锤</text>
+      <text x="1335" y="630">L34　安全 / 红队 / 可解释</text>
+      <text x="1335" y="655">L35　反派视角 + 五个预测</text>
+    </g>
+    <text x="1460" y="700" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.7" font-style="italic">不以"展望"收尾，以「判断」收束</text>
+  </g>
+
+  <!-- Stage flow arrows -->
+  <g stroke="currentColor" stroke-width="2.5" fill="none" marker-end="url(#arr)" opacity="0.55">
+    <line x1="540" y1="328" x2="568" y2="328"/>
+    <line x1="1080" y1="328" x2="1108" y2="328"/>
+    <line x1="350" y1="613" x2="378" y2="613"/>
+    <line x1="1280" y1="613" x2="1308" y2="613"/>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- Bottom · 5 Through-lines                                             -->
+  <!-- =================================================================== -->
+  <g>
+    <rect x="30" y="755" width="1580" height="190" rx="12" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="50" y="785" font-size="16" font-weight="700" fill="currentColor">5 条呼应线 · Through-lines（贯穿全课的叙事埋线）</text>
+
+    <g font-size="15">
+      <circle cx="62" cy="817" r="5" class="c-a" fill="currentColor"/>
+      <text x="78" y="822" font-weight="700" class="c-a" fill="currentColor">system-1-2</text>
+      <text x="210" y="822" fill="currentColor" opacity="0.85">L01 → L20 → L35　｜　人类 System 1/2 → AI 通过推理时计算获得自己的 System 2 → 人机认知架构趋同</text>
+
+      <circle cx="62" cy="843" r="5" class="c-e" fill="currentColor"/>
+      <text x="78" y="848" font-weight="700" class="c-e" fill="currentColor">inductive-bias-vs-scaling</text>
+      <text x="290" y="848" fill="currentColor" opacity="0.85">L01 → L06–07 → L12 → L18,L20,L21 → L35　｜　CNN/RNN 编入先验 → Transformer 抛弃先验，规模碾压</text>
+
+      <circle cx="62" cy="869" r="5" class="c-amber" fill="currentColor"/>
+      <text x="78" y="874" font-weight="700" class="c-amber" fill="currentColor">vector-space</text>
+      <text x="210" y="874" fill="currentColor" opacity="0.85">L05 → L11 → L23 → L29 → L35　｜　一切皆可嵌入：从词到句到段到多模态 — 几何成为统一语言</text>
+
+      <circle cx="62" cy="895" r="5" class="c-pink" fill="currentColor"/>
+      <text x="78" y="900" font-weight="700" class="c-pink" fill="currentColor">physical-bill</text>
+      <text x="210" y="900" fill="currentColor" opacity="0.85">L03 → L12 → L14–15 → L22 → L31 → L33　｜　算力 / 能耗 / 成本始终在账上 — 优雅的数学最终要被硬件兑现</text>
+
+      <circle cx="62" cy="921" r="5" class="c-c" fill="currentColor"/>
+      <text x="78" y="926" font-weight="700" class="c-c" fill="currentColor">evaluator</text>
+      <text x="210" y="926" fill="currentColor" opacity="0.85">L03 → L13 → L18 → L20 → L26 → L31 → L34　｜　损失函数 → 奖励模型 → 自我评估 → PGE 反馈环 — 评判者的进化决定能力的进化</text>
+    </g>
+  </g>
+</svg>
